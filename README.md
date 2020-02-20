@@ -9,3 +9,5 @@
 	Página web:       https://frankmorenoalburqueque.com
 	Correo:		      admin@frankmorenoalburqueque.com
 	Tema:	  		  API Reniec
+
+ El index esta en ./MARKETING/
