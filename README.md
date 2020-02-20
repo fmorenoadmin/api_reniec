@@ -11,4 +11,4 @@
 	Correo:		      admin@frankmorenoalburqueque.com	
 	Tema:	  		  API Reniec
 
- El index esta en ./MARKETING/
+ El index esta en ./MARKETIN/
