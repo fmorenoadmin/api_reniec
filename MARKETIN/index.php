@@ -3,6 +3,9 @@
 	$rut='../';
 	require_once($rut.'Const.php');
 	$_SESSION['user_id'] = 1;
+	/**
+	 * API to call reniec por Franl Moreno Alburqueque
+	 */
 ?>
 <!DOCTYPE html>
 <html>

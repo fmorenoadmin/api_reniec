@@ -1,5 +1,8 @@
 <?php
 	session_start();
+	/**
+	 * API to call reniec por Franl Moreno Alburqueque
+	 */
 
     if (isset($_SESSION['user_id'])) {
     	header('Content-Type: application/json; charset=utf-8');

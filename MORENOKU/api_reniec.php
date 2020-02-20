@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * API to call reniec
+	 * API to call reniec por Franl Moreno Alburqueque
 	 */
 	class api_reniec
 	{
