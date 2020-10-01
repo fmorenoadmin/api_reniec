@@ -6,7 +6,7 @@
 
     if (isset($_SESSION['user_id'])) {
     	header('Content-Type: application/json; charset=utf-8');
-    	header('Access-Control-Allow-Origin: https://api.reniec.cloud/dni/03655166');
+    	//header('Access-Control-Allow-Origin: https://api.reniec.cloud/dni/03655166');
     	header('Access-Control-Allow-Origin: *');
     	$dbs='DataBase';
     	$ru0='MORENOKU/';
