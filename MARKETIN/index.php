@@ -28,7 +28,8 @@
 	    Desarrollado por: Moreno Alburqueque Frank Martin
 	    Página web:       https://frankmorenoalburqueque.com
 	    Tema:	  		  API Reniec">
-	<link type="text/css" rel="stylesheet" href="https://cdn.embedly.com/css/social.e025eaf3.css"><link rel="icon" href="https://frankmorenoalburqueque.com/images/user.ico" sizes="32x32">
+	<link type="text/css" rel="stylesheet" href="https://cdn.embedly.com/css/social.e025eaf3.css">
+	<link rel="icon" href="<?= ICO; ?>" sizes="32x32">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
 </head>
 <body style="background-color: #000000;">
@@ -81,9 +82,35 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
 
+    <script>
+          $(function(){
+              $("#buscarDNI").on('click', function(){
+                var numdni = $('#dni').val();
+                $.ajax({
+                  url:"<?= $rut.DIRACT; ?>index.php",
+                  method:'GET',
+                  data:{dni: numdni},
+                  dataType:'json',
+                  success:function(data){
+                    var resultados=data.dni;
+                    if (resultados.length > 7) {
+                      $('#paterno').val(data.nombres);
+                      $('#materno').val(data.apellidoPaterno+' '+data.apellidoMaterno);
+                      $('#nombres').val(data.apellidoPaterno+' '+data.apellidoMaterno);
+                    }else{
+                      $('#paterno').val('No se encontró el registro. DNI errado.');
+                      $('#materno').val('No se encontró el registro. DNI errado.');
+                      $('#nombres').val('No se encontró el registro. DNI errado.');
+                    }
+                  }
+                });
+                return false;
+              });
+          });
+    </script>
 	<script>
 		$(function(){
-			$("#buscarDNI").on('click', function(){
+			$("#buscarDNI2").on('click', function(){
 				var numdni = $('#dni').val();
 				$.ajax({
 					url: "<?= $rut.DIRACT; ?>index.php",
