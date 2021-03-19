@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * API to call reniec por Franl Moreno Alburqueque
+	 * API to call reniec por Franl Moreno Alburquequeontents("");
 	 */
 	class api_reniec
 	{
